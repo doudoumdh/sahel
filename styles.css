@@ -14,7 +14,7 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #0A7300; /* Deep green color */
+    background-color: #FF8C00; /* Deep green color */
     color: white;
     padding: 1rem 2rem;
     display: flex;
@@ -100,7 +100,7 @@ header nav ul li a:hover {
 }
 
 .search-container button {
-    padding: 0.5rem 1rem;
+    padding: 14px 28px;
     margin-left: 10px;
     background-color: #FF8C00; /* Orange */
     color: white;
@@ -143,4 +143,15 @@ header nav ul li a:hover {
 }
 
 .category:hover {
-    transform: translateY
+    transform: translateY(10%);
+}
+
+footer {
+    background-color: #127904; /* Deep green color */
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}

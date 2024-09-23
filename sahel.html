@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sahel Online - Connecting Services and Freelancers</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="scripts" href="styles.js">
 </head>
 
 <body>
@@ -28,7 +29,7 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Browse Services</a></li>
-                    <li><a href="#">Post a Request</a></li>
+                    <li><a href="postPage.html">Post a Request</a></li>
                     <!-- Sign Out Button -->
                     <li><button id="signOutButton" style="background: none; border: none; color: white; cursor: pointer;">Sign Out</button></li>
                 </ul>
@@ -55,7 +56,7 @@
             <div class="category">
                 <h3>Find Services</h3>
                 <p>Post a request and receive offers from skilled freelancers.</p>
-                <button type="button">Post a Request</button>
+                <button id="postRequestBtn" type="button">Post a Request</button>
             </div>
             <div class="category">
                 <h3>Offer Services</h3>
@@ -65,14 +66,12 @@
         </div>
     </section>
 
-
-    
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Sahel Online. All Rights Reserved.</p>
     </footer>
 
-    <!-- JavaScript for Dynamic User Data and Sign Out -->
+    <!-- JavaScript for Dynamic User Data and Redirections -->
     <script>
         // Example user data - this would typically be retrieved from a server or session
         const user = {
@@ -84,11 +83,17 @@
         document.getElementById('userName').innerText = `Welcome, ${user.name}`;
         document.getElementById('userPic').src = user.profilePic;
 
-        // Redirect to login page when the sign out button is clicked
+        // Redirect to postPage.html when the "Post a Request" button is clicked
+        document.getElementById('postRequestBtn').addEventListener('click', function() {
+            window.location.href = 'postPage.html'; // Adjust the path as needed
+        });
+
+        // Redirect to index page when the sign out button is clicked
         document.getElementById('signOutButton').addEventListener('click', function() {
-            window.location.href = 'loginPage.html'; // Adjust the path as needed
+            window.location.href = 'index.html'; // Adjust the path as needed
         });
     </script>
+
 </body>
 
 </html>
